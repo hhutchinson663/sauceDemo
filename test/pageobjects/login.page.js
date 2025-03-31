@@ -66,7 +66,7 @@ class LoginPage extends Page {
         await HamburgerMenu.hamburgerMenuButton.click()
         await HamburgerMenu.logout.click()
         await expect(this.inputPassword).toBeExisting()
-    }
+        }
     }
     
     open () {

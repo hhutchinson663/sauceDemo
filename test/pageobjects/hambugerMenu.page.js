@@ -25,4 +25,5 @@ class HamburgerMenu extends Page {
         return $('#reset_sidebar_link')
     }
 }
+
 export default new HamburgerMenu();

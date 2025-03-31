@@ -16,8 +16,5 @@ describe('My Login application', () => {
         await HamburgerMenu.hamburgerMenuButton.click()
         await HamburgerMenu.allItems.click()
         await HomePage.removeAdditionalItems()
-
-
-
     })
 })
