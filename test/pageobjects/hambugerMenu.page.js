@@ -12,5 +12,17 @@ class HamburgerMenu extends Page {
     get logout () {
         return $('#logout_sidebar_link');
     }
+
+    get allItems () {
+        return $('#inventory_sidebar_link')
+    }
+
+    get about () {
+        return $('#about_sidebar_link')
+    }
+
+    get resetAppState () {
+        return $('#reset_sidebar_link')
+    }
 }
 export default new HamburgerMenu();

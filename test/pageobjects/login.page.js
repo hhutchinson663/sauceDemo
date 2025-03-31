@@ -43,14 +43,12 @@ class LoginPage extends Page {
         await this.btnLogin.moveTo();
         await this.btnLogin.click();
     }
-    
 
     async negUserScenarios(password) {
         for (let i = 0; i < this.users.length; i++) {
         await this.login(this.users[i], password)
         await expect(this.inputPassword).toBeExisting()
         }
-
     }
 
     async posUserScenarios(password) {
@@ -63,6 +61,7 @@ class LoginPage extends Page {
             await expect(this.epicSadFaceErrorLockOut).toBeExisting()
             break
         }
+    
         await expect(browser).toHaveUrl('https://www.saucedemo.com/inventory.html')
         await HamburgerMenu.hamburgerMenuButton.click()
         await HamburgerMenu.logout.click()
@@ -71,7 +70,7 @@ class LoginPage extends Page {
     }
     
     open () {
-        return super.open('login');
+        return super.open('');
     }
 }
 
