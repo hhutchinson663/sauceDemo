@@ -1,7 +1,6 @@
 import { $ } from '@wdio/globals'
 import Page from './base.js';
 import { expect } from '@wdio/globals'
-import YourCartPage from './yourcart.page.js';
 
 /**
  * sub page containing specific selectors and methods for a specific page
@@ -19,9 +18,9 @@ class HomePage extends Page {
         return $('.shopping_cart_badge')
     }
 
-    randomIndex = Math.floor(Math.random() * this.inventoryItems.length)
-
     inventoryItems = ["sauce-labs-backpack", "sauce-labs-bike-light", "sauce-labs-bolt-t-shirt", "sauce-labs-fleece-jacket", "sauce-labs-onesie", "test.allthethings()-t-shirt-(red)"]
+
+    randomIndex = Math.floor(Math.random() * this.inventoryItems.length)
 
     async addToCart(item) {
         return $(`[id="add-to-cart-${item}"]`)

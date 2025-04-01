@@ -1,6 +1,5 @@
 import { $ } from '@wdio/globals'
 import Page from './base.js';
-import HamburgerMenu from './hambugerMenu.page.js';
 import { expect } from '@wdio/globals'
 import HomePage from './home.page.js';
 
@@ -40,7 +39,7 @@ class YourCartPage extends Page {
         expect (this.shoppingCartContent).toBeExisting()
     }
 
-    }
+}
 
 
 export default new YourCartPage();

@@ -24,6 +24,11 @@ class HamburgerMenu extends Page {
     get resetAppState () {
         return $('#reset_sidebar_link')
     }
+
+    async clickAboutAndVerify() {
+        this.about.click()
+        expect(browser).toHaveUrl('https://saucelabs.com/')
+    }
 }
 
 export default new HamburgerMenu();
